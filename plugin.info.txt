@@ -1,0 +1,7 @@
+base   showlogin
+author Oliver Geisen
+email  oliver.geisen@kreisbote.de
+date   2012-11-01
+name   showlogin plugin
+desc   Show login-page if user is not logged in and ACL restricts access to wanted wikipage
+url    https://github.com/igittigitt/dokuwiki-plugin-showlogin/zipball/master
