@@ -20,7 +20,7 @@ class action_plugin_showlogin extends DokuWiki_Action_Plugin {
     /**
      * Register its handlers with the dokuwiki's event controller
      */
-    public function register(Doku_Event_Handler &$controller) {
+    public function register(Doku_Event_Handler $controller) {
 
       # TPL_CONTENT_DISPLAY is called before and after content of wikipage is written to output buffer
        $controller->register_hook('TPL_CONTENT_DISPLAY', 'BEFORE', $this, 'handle_tpl_content_display');
