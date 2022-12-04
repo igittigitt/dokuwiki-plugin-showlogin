@@ -34,7 +34,7 @@ class action_plugin_showlogin extends DokuWiki_Action_Plugin {
       global $ACT;
 
       # If user is not logged in and access to page is denied, show login form
-      if (($ACT == 'denied') && (! $_SERVER['REMOTE_USER'])) {
+      if (($ACT == 'denied') && (!array_key_exists('REMOTE_USER', $_SERVER) || ! $_SERVER['REMOTE_USER'])) {
 	$event->preventDefault(); // prevent "Access denied" page from showing
 	html_login(); // show login dialog instead
       }
